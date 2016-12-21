@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Modal Window Blocker - In page pop-ups",
+  "description": "This Chrome git remote add origin https://github.com/DrNio13/pop-up-blocker.gitextension will block modal windows inside the page. Warning: it could block necessary dialogs from the website to the user, e.g. login pop-ups. Please use with caution.",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.businessinsider.com/*", "https://www.businessinsider.com/*", "http://local-pop-up-blocker.com/"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
