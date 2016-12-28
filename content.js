@@ -19,17 +19,12 @@ class Modal {
         let all = [];
         all.push(this.getModals(), this.getBackdrops());
 
-        return all;
-    }
-
-    deleteAll() {
-        let els = this.getAll();
-        let size = els.length;
+        let size = all.length;
         let temp = [];
 
         if (size > 0) {
 
-            els.forEach(function sk(item) { // could be 1 DOM element or HTMLCollection
+            all.forEach(function sk(item) { // could be 1 DOM element or HTMLCollection
 
                 if (item.length > 0) {
                     for (let j = 0; j < item.length; j++) {
@@ -42,6 +37,12 @@ class Modal {
             });
 
         }
+
+        return temp;
+    }
+
+    deleteAll() {
+        let temp = this.getAll();
 
         temp.forEach(function d(el){
             if (el.parentNode) {
@@ -85,7 +86,7 @@ setTimeout(function () {
         // else {
         //     stopInterval();
         // }
-    }, 200);
+    }, 100);
 
 }, 3000);
 
